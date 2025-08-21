@@ -1,75 +1,62 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# Job Listings Challenge
 
-## Getting Started
+**Level:** Intermediate  
+**Technologies:** HTML, CSS, JavaScript  
+**Project Type:** Free  
 
-First, run the development server:
+---
+<img width="1975" height="1093" alt="Screenshot 2025-08-21 at 11 16 42 AM" src="https://github.com/user-attachments/assets/d39e564b-f25f-40e0-a01f-444d13b3bb6d" />
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+## Overview
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+In this challenge, you'll be building a **Job Listings landing page** with filtering functionality.  
+You'll use **JavaScript** to filter jobs based on selected categories. A local `data.json` file is provided to help you practice working with JSON data.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+---
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+## Objective
 
-## Learn More
+Your challenge is to build out the landing page and make it look as close to the provided design as possible.  
 
-To learn more about Next.js, take a look at the following resources:
+You can use **any tools or libraries** you like to help complete the project.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+---
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Features
 
-## Deploy on Vercel
+Your users should be able to:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- Filter job listings based on selected categories  
+- View the optimal layout depending on their device's screen size  
+- See hover and focus states for all interactive elements on the page  
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+---
 
+## Project Setup
 
+1. Download the starter code  
+2. Open the project in your editor  
+3. Use the provided `data.json` file to populate content on first load  
 
+---
 
-# Front-end Style Guide
+## Design References
 
-## Layout
+- **Desktop Design Preview:** Check the design file for desktop layout  
+- **Mobile Design Preview:** Ensure layout adapts to mobile devices  
+- **Active States:** Include hover, focus, and interactive states for UI elements  
 
-The designs were created to the following widths:
+---
 
-- Mobile: 375px
-- Desktop: 1440px
+## Notes
 
-> 💡 These are just the design sizes. Ensure content is responsive and meets WCAG requirements by testing the full range of screen sizes from 320px to large screens.
+- Refer to `style-guide.md` for colors, fonts, and other design details  
+- Feel free to experiment with different approaches to complete the project  
 
-## Colors
+---
 
-### Primary
+## Support
 
-- Green 400: hsl(180, 29%, 50%)
+If you need help, join the community and ask questions in the challenge help channel.
 
-### Neutral
-
-- Green 50 (Background): hsl(180, 52%, 96%)
-- Gray 400: hsl(180, 8%, 52%)
-- Green 900: hsl(180, 14%, 20%)
-
-## Typography
-
-### Body Copy
-
-- Font size: 15px
-
-### Headings
-
-- Family: [League Spartan](https://fonts.google.com/specimen/League+Spartan)
-- Weights: 500, 700
-
-> 💎 [Upgrade to Pro](https://www.frontendmentor.io/pro?ref=style-guide) for design file access to see all design details and get hands-on experience using a professional workflow with tools like Figma.
+---
