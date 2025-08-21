@@ -4,7 +4,7 @@ export const jobListings:JobListing[] = [
     {
         id: 1,
         company: "Photosnap",
-        logo: "./images/photosnap.svg",
+        logo: "./Svgs/photosnap.svg",
         new: true,
         featured: true,
         position: "Senior Frontend Developer",
@@ -19,7 +19,7 @@ export const jobListings:JobListing[] = [
     {
         id: 2,
         company: "Manage",
-        logo: "./images/manage.svg",
+        logo: "./Svgs/manage.svg",
         new: true,
         featured: true,
         position: "Fullstack Developer",
@@ -34,7 +34,7 @@ export const jobListings:JobListing[] = [
     {
         id: 3,
         company: "Account",
-        logo: "./images/account.svg",
+        logo: "./Svgs/account.svg",
         new: true,
         featured: false,
         position: "Junior Frontend Developer",
@@ -49,7 +49,7 @@ export const jobListings:JobListing[] = [
     {
         id: 4,
         company: "MyHome",
-        logo: "./images/myhome.svg",
+        logo: "./Svgs/myhome.svg",
         new: false,
         featured: false,
         position: "Junior Frontend Developer",
@@ -64,7 +64,7 @@ export const jobListings:JobListing[] = [
     {
         id: 5,
         company: "Loop Studios",
-        logo: "./images/loop-studios.svg",
+        logo: "./Svgs/loop-studios.svg",
         new: false,
         featured: false,
         position: "Software Engineer",
@@ -79,7 +79,7 @@ export const jobListings:JobListing[] = [
     {
         id: 6,
         company: "FaceIt",
-        logo: "./images/faceit.svg",
+        logo: "./Svgs/faceit.svg",
         new: false,
         featured: false,
         position: "Junior Backend Developer",
@@ -94,7 +94,7 @@ export const jobListings:JobListing[] = [
     {
         id: 7,
         company: "Shortly",
-        logo: "./images/shortly.svg",
+        logo: "./Svgs/shortly.svg",
         new: false,
         featured: false,
         position: "Junior Developer",
@@ -109,7 +109,7 @@ export const jobListings:JobListing[] = [
     {
         id: 8,
         company: "Insure",
-        logo: "./images/insure.svg",
+        logo: "./Svgs/insure.svg",
         new: false,
         featured: false,
         position: "Junior Frontend Developer",
@@ -124,7 +124,7 @@ export const jobListings:JobListing[] = [
     {
         id: 9,
         company: "Eyecam Co.",
-        logo: "./images/eyecam-co.svg",
+        logo: "./Svgs/eyecam-co.svg",
         new: false,
         featured: false,
         position: "Full Stack Engineer",
@@ -139,7 +139,7 @@ export const jobListings:JobListing[] = [
     {
         id: 10,
         company: "The Air Filter Company",
-        logo: "./images/the-air-filter-company.svg",
+        logo: "./Svgs/the-air-filter-company.svg",
         new: false,
         featured: false,
         position: "Front-end Dev",
