@@ -1,103 +1,70 @@
-import Image from "next/image";
+"use client";
+import { useState } from "react";
+import CardsContainer from "./components/CardsContainer";
+import jobListings from "../data/data";
+import { JobListing } from "../types/data.types";
 
 export default function Home() {
-  return (
-    <div className="font-sans grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
-      <main className="flex flex-col gap-[32px] row-start-2 items-center sm:items-start">
-        <Image
-          className="dark:invert"
-          src="/next.svg"
-          alt="Next.js logo"
-          width={180}
-          height={38}
-          priority
-        />
-        <ol className="font-mono list-inside list-decimal text-sm/6 text-center sm:text-left">
-          <li className="mb-2 tracking-[-.01em]">
-            Get started by editing{" "}
-            <code className="bg-black/[.05] dark:bg-white/[.06] font-mono font-semibold px-1 py-0.5 rounded">
-              app/page.tsx
-            </code>
-            .
-          </li>
-          <li className="tracking-[-.01em]">
-            Save and see your changes instantly.
-          </li>
-        </ol>
+  const [input, setInput] = useState("");     
+  const [selected, setSelected] = useState<string[]>([]); 
 
-        <div className="flex gap-4 items-center flex-col sm:flex-row">
-          <a
-            className="rounded-full border border-solid border-transparent transition-colors flex items-center justify-center bg-foreground text-background gap-2 hover:bg-[#383838] dark:hover:bg-[#ccc] font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 sm:w-auto"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <Image
-              className="dark:invert"
-              src="/vercel.svg"
-              alt="Vercel logomark"
-              width={20}
-              height={20}
-            />
-            Deploy now
-          </a>
-          <a
-            className="rounded-full border border-solid border-black/[.08] dark:border-white/[.145] transition-colors flex items-center justify-center hover:bg-[#f2f2f2] dark:hover:bg-[#1a1a1a] hover:border-transparent font-medium text-sm sm:text-base h-10 sm:h-12 px-4 sm:px-5 w-full sm:w-auto md:w-[158px]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Read our docs
-          </a>
-        </div>
-      </main>
-      <footer className="row-start-3 flex gap-[24px] flex-wrap items-center justify-center">
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/file.svg"
-            alt="File icon"
-            width={16}
-            height={16}
-          />
-          Learn
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/window.svg"
-            alt="Window icon"
-            width={16}
-            height={16}
-          />
-          Examples
-        </a>
-        <a
-          className="flex items-center gap-2 hover:underline hover:underline-offset-4"
-          href="https://nextjs.org?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <Image
-            aria-hidden
-            src="/globe.svg"
-            alt="Globe icon"
-            width={16}
-            height={16}
-          />
-          Go to nextjs.org →
-        </a>
-      </footer>
-    </div>
+  // Handle clicking a language/company/position tag
+  const handleClick = (item: string) => {
+    if (!selected.includes(item)) {
+      const newSelected = [...selected, item];
+      setSelected(newSelected);
+      setInput(newSelected.join(" "));
+    }
+  };
+
+  // Filter jobs based on input/tags
+  const filteredJobs = jobListings.filter((job: JobListing) => {
+    const searchTerms = input.split(",").map(term => term.trim().toLowerCase());
+    return searchTerms.every(term =>
+      job.company.toLowerCase().includes(term) ||
+      job.position.toLowerCase().includes(term) ||
+      job.languages.some(lang => lang.toLowerCase().includes(term))
+    );
+  });
+
+  return (
+    <>
+      {/* Header SVG */}
+      <svg
+        className="w-full h-auto"
+        viewBox="0 0 1440 156"
+        xmlns="http://www.w3.org/2000/svg"
+      >
+        <defs>
+          <path id="a" d="M0 0h1440v156H0z" />
+        </defs>
+        <g fill="hsl(180, 31.40%, 46.90%)" fillRule="evenodd">
+          <mask id="b" fill="#fff">
+            <use xlinkHref="#a" />
+          </mask>
+          <use xlinkHref="#a" />
+          <g mask="url(#b)" fill="#63BABA">
+            <path d="M495.73 563.419c-51.439-48.795-53.583-130.05-4.788-181.489a128.377 128.377 0 0 1 4.789-4.789l418.16-396.66c55.045-52.215 141.329-52.215 196.374 0 50.418 47.825 53.478 126.835 7.634 178.39l188.06-178.39c55.045-52.215 141.328-52.215 196.373 0 51.44 48.794 53.583 130.049 4.789 181.488a128.377 128.377 0 0 1-4.789 4.789l-418.158 396.658c-55.045 52.215-141.329 52.215-196.374 0-50.418-47.825-53.478-126.835-7.634-178.39L692.104 563.42c-55.045 52.215-141.328 52.215-196.373 0ZM360.464 45.523c-51.44-48.794-53.583-130.05-4.789-181.488a128.377 128.377 0 0 1 4.789-4.79l418.163-396.663c55.046-52.215 141.33-52.215 196.374 0 51.44 48.794 53.583 130.05 4.789 181.488a128.376 128.376 0 0 1-4.789 4.79L556.837 45.522c-55.045 52.215-141.328 52.215-196.373 0Zm-468.795 71.832c-51.439-48.795-53.583-130.05-4.789-181.489a128.377 128.377 0 0 1 4.79-4.788l418.16-396.661c55.045-52.215 141.328-52.215 196.373 0 51.44 48.794 53.583 130.05 4.79 181.488a128.378 128.378 0 0 1-4.79 4.789l-418.16 396.66c-55.045 52.216-141.329 52.216-196.374 0Z" />
+          </g>
+        </g>
+      </svg>
+
+      {/* Search input */}
+      <div className="flex justify-center -mt-10 px-4">
+        <input
+          type="text"
+          placeholder="Search jobs..."
+          value={input}
+          onChange={(e) => setInput(e.target.value)}
+          className="w-full max-w-4xl bg-white border border-gray-300 placeholder-gray-400 text-base rounded-lg px-6 py-6 shadow-lg focus:outline-none focus:ring-2 focus:ring-[hsl(180,29%,50%)] focus:border-[hsl(180,29%,50%)] z-20"
+        />
+      </div>
+
+      {/* Cards container */}
+      <CardsContainer
+        jobs={filteredJobs}
+        onTagClick={handleClick}
+      />
+    </>
   );
 }
