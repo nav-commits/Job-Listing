@@ -26,47 +26,47 @@ const Card: React.FC<CardProps> = ({
   languages,
   onClick
 }) => {
- 
   return (
-    <div className="bg-white shadow-lg rounded-xl p-8 flex flex-col gap-6 w-full max-w-4xl mx-auto">
-      <div className="flex justify-between items-center gap-8">
-        <div className="flex items-start gap-6 flex-1">
+    <div className="bg-white shadow-lg rounded-xl p-6 sm:p-8 flex flex-col gap-6 w-full max-w-4xl mx-auto">
+      <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6 md:gap-8">
+        {/* Logo & Main Info */}
+        <div className="flex flex-1 flex-col sm:flex-row items-start sm:items-center gap-4 sm:gap-6 w-full">
           <Image
             src={logo}
             alt={`${company} logo`}
-            width={100}
-            height={100}
+            width={80}
+            height={80}
             className="rounded-full flex-shrink-0"
           />
-          <div className="flex flex-col gap-2">
-            <div className="flex space-x-3">
-              <h2 className="text-lg text-[hsl(180,29%,50%)] font-bold">
-                {company}
-              </h2>
+          <div className="flex flex-col gap-2 w-full">
+            <div className="flex flex-wrap items-center gap-2">
+              <h2 className="text-lg text-[hsl(180,29%,50%)] font-bold">{company}</h2>
               {isNew && (
-                <span className="bg-[hsl(180,29%,50%)] text-white text-sm font-bold px-2 py-1 rounded-full">
+                <span className="bg-[hsl(180,29%,50%)] text-white text-xs sm:text-sm font-bold px-2 py-1 rounded-full">
                   NEW!
                 </span>
               )}
               {featured && (
-                <span className="bg-gray-800 text-white text-sm font-bold px-2 py-1 rounded-full">
+                <span className="bg-gray-800 text-white text-xs sm:text-sm font-bold px-2 py-1 rounded-full">
                   FEATURED
                 </span>
               )}
             </div>
-            <p className="font-bold text-xl">{position}</p>
-            <div className="flex flex-wrap gap-8 text-gray-600 mt-3">
+            <p className="font-bold text-lg sm:text-xl">{position}</p>
+            <div className="flex flex-wrap gap-4 sm:gap-8 text-gray-600 mt-2 sm:mt-3 text-sm sm:text-base">
               <span>{postedAt}</span>
               <span>{contract}</span>
               <span>{location}</span>
             </div>
           </div>
         </div>
-        <div className="flex gap-3">
+
+        {/* Languages */}
+        <div className="flex flex-wrap gap-2 sm:gap-3 mt-4 md:mt-0">
           {languages.map((lang) => (
             <span
               key={lang}
-              className="cursor-pointer bg-[hsl(180,52%,96%)] text-[hsl(180,29%,50%)] text-sm font-bold px-3 py-1 rounded"
+              className="cursor-pointer bg-[hsl(180,52%,96%)] text-[hsl(180,29%,50%)] text-xs sm:text-sm font-bold px-3 py-1 rounded"
               onClick={() => onClick?.(lang)}
             >
               {lang}
