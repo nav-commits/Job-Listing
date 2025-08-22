@@ -5,7 +5,9 @@
 **Project Type:** Free  
 
 ---
-<img width="1975" height="1093" alt="Screenshot 2025-08-21 at 11 16 42 AM" src="https://github.com/user-attachments/assets/d39e564b-f25f-40e0-a01f-444d13b3bb6d" />
+<img width="2129" height="1005" alt="Screenshot 2025-08-22 at 2 33 38 PM" src="https://github.com/user-attachments/assets/a455f46a-9160-4dbc-9f01-013663737af7" />
+<img width="2156" height="1052" alt="Screenshot 2025-08-22 at 2 34 36 PM" src="https://github.com/user-attachments/assets/597f481a-3922-4912-99bb-fa99459cda90" />
+
 
 ## Overview
 
