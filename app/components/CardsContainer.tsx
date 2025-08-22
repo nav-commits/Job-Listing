@@ -9,7 +9,7 @@ interface CardsContainerProps {
 
 export default function CardsContainer({ jobs, onTagClick }: CardsContainerProps) {
   return (
-    <div className="flex flex-col items-center w-full px-4 mt-8">
+    <div className="flex flex-col items-center px-4 mt-8">
       <div className="space-y-4 w-full max-w-4xl">
         {jobs.map((job: JobListing) => (
           <Card
