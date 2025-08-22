@@ -1,44 +1,15 @@
 @import "tailwindcss";
 
-
 :root {
   /* Body colors */
   --color-background: hsl(180, 52%, 96%);
   --color-foreground: hsl(180, 14%, 20%);
-
-  /* Font */
-  --font-body: 'League Spartan', sans-serif;
-}
-
-/* Dark mode (optional) */
-@media (prefers-color-scheme: dark) {
-  :root {
-    --color-background: #0a0a0a;
-    --color-foreground: #ededed;
-  }
 }
 
 /* Body styles */
 body {
   background-color: var(--color-background);
-  color: var(--color-foreground);
-  font-family: var(--font-body);
-  font-size: 15px;
   margin: 0;
   padding: 0;
 }
 
-/* Page container */
-.container {
-  max-width: 1440px; /* desktop width */
-  margin-left: auto;
-  margin-right: auto;
-  padding-left: 1rem;
-  padding-right: 1rem;
-}
-
-@media (max-width: 375px) {
-  .container {
-    max-width: 375px; /* mobile width */
-  }
-}
