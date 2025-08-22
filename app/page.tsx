@@ -54,6 +54,9 @@ export default function Home() {
           <input
             type="text"
             value={input}
+            placeholder={
+              selected.length === 0 && input === "" ? "search..." : ""
+            }
             onChange={(e) => setInput(e.target.value)}
             className="flex-grow outline-none text-base placeholder-gray-400 bg-transparent min-w-[150px] py-4 px-4"
           />
