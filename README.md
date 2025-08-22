@@ -40,8 +40,6 @@ Follow these steps to run the project locally:
 
 1. **Clone the repository**  
    ```bash
-   git clone <your-repo-url>
-   cd <your-repo-directory>
-npm install
-
-npm run dev
+   git clone <https://github.com/nav-commits/Job-Listing>
+   npm install
+   npm run dev
