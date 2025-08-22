@@ -12,6 +12,8 @@ interface CardProps {
   contract: string;
   location: string;
   languages: string[];
+  role: string;
+  level: string;
   onClick?: (item: string) => void;
 }
 
@@ -25,6 +27,8 @@ const Card: React.FC<CardProps> = ({
   contract,
   location,
   languages,
+  role,
+  level,
   onClick,
 }) => {
   return (
@@ -59,7 +63,9 @@ const Card: React.FC<CardProps> = ({
                 </span>
               )}
             </div>
-            <p className="font-bold text-lg hover:text-[hsl(180,29%,50%)] cursor-pointer ">{position}</p>
+            <p className="font-bold text-lg hover:text-[hsl(180,29%,50%)] cursor-pointer ">
+              {position}
+            </p>
             <div className="flex items-center text-gray-600 text-sm">
               <span>{postedAt}</span>
               <span className="before:content-['•'] before:text-gray-400 before:mx-2">
@@ -72,6 +78,18 @@ const Card: React.FC<CardProps> = ({
           </div>
         </div>
         <div className="flex gap-2">
+          <span
+            onClick={() => onClick?.(role)}
+            className="hover:bg-[hsl(180,29%,50%)] hover:text-white  cursor-pointer bg-[hsl(180,52%,96%)] text-[hsl(180,29%,50%)] text-xs font-bold px-3 py-1 rounded"
+          >
+            {role}
+          </span>
+          <span
+            onClick={() => onClick?.(level)}
+            className="hover:bg-[hsl(180,29%,50%)] hover:text-white  cursor-pointer bg-[hsl(180,52%,96%)] text-[hsl(180,29%,50%)] text-xs font-bold px-3 py-1 rounded"
+          >
+            {level}
+          </span>
           {languages.map((lang) => (
             <span
               key={lang}

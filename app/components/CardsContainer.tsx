@@ -23,6 +23,8 @@ export default function CardsContainer({ jobs, onTagClick }: CardsContainerProps
             contract={job.contract}
             location={job.location}
             languages={job.languages}
+            role={job.role}
+            level={job.level}
             onClick={onTagClick}
           />
         ))}
